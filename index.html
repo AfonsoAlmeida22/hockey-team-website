@@ -15,13 +15,138 @@
 <body>
 
   <header>
-    <div class="menu-icon">&#9776;</div>
-    <img src="images/logo-hcm-white.svg" alt="HC Mealhada logo" class="club-logo">
+    <button class="menu-icon" aria-expanded="false" aria-controls="side-menu">&#9776;</button>
+    <a href="index.html"><img src="images/logo-hcm-white.svg" alt="HC Mealhada logo" class="club-logo"></a>
   </header>
+  <nav class="side-menu" id="side-menu" aria-hidden="true">
+    <div class="side-menu-top">
+      <a href="index.html"><img src="images/logo-hcm-white.svg" alt="HC Mealhada logo" class="side-menu-logo"></a>
+      <button class="side-menu-close">
+        Fechar <span aria-hidden="true">&#10005;</span>
+      </button>
+    </div>
+    <ul class="side-menu-links">
+      <li>
+        <a href="index.html">
+          Página Principal
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="games.html">
+          Resultados e Jogos
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
   <main class="main-container">
     <section id="squad-container">
       <h1>Plantel 26/27</h1>
+
+      <div class="carousel">
+        <button class="carousel-btn prev">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 4 7 12 15 20"></polyline></svg>
+        </button>
+
+        <ul class="carousel-track">
+          <li class="player-card">
+            <div class="player-photo">
+              <img src="images/squad/Coelho.webp" alt="João Coelho" class="photo-main">
+              <img src="images/squad/CoelhoS2.webp" alt="" class="photo-alt">
+            </div>
+            <div class="player-info">
+              <span class="player-number">20</span>
+              <p class="player-name">João <br>Coelho</p>
+            </div>
+          </li>
+          <li class="player-card">
+            <div class="player-photo">
+              <img src="images/squad/Afonso.webp" alt="Afonso Almeida" class="photo-main">
+              <img src="images/squad/AfonsoS2.webp" alt="" class="photo-alt">
+            </div>
+            <div class="player-info">
+              <span class="player-number">2</span>
+              <p class="player-name">Afonso <br>Almeida</p>
+            </div>
+          </li>
+          <li class="player-card">
+            <div class="player-photo">
+              <img src="images/squad/Guilherme.webp" alt="Guilherme" class="photo-main">
+              <img src="images/squad/GuilhermeS2.webp" alt="" class="photo-alt">
+            </div>
+            <div class="player-info">
+              <span class="player-number">5</span>
+              <p class="player-name">Guilherme <br>Costa </p>
+            </div>
+          </li>
+          <li class="player-card">
+            <div class="player-photo">
+              <img src="images/squad/Loureiro.webp" alt="Loureiro" class="photo-main">
+              <img src="images/squad/LoureiroS2.webp" alt="" class="photo-alt">
+            </div>
+            <div class="player-info">
+              <span class="player-number">1</span>
+              <p class="player-name">Henrique <br>Loureiro</p>
+            </div>
+          </li>
+          <li class="player-card">
+            <div class="player-photo">
+              <img src="images/squad/Lucas.webp" alt="Lucas" class="photo-main">
+              <img src="images/squad/LucasS2.webp" alt="" class="photo-alt">
+            </div>
+            <div class="player-info">
+              <span class="player-number">78</span>
+              <p class="player-name">Lucas <br>Pedro</p>
+            </div>
+          </li>
+          <li class="player-card">
+            <div class="player-photo">
+              <img src="images/squad/Martim.webp" alt="Martim" class="photo-main">
+              <img src="images/squad/MartimS2.webp" alt="" class="photo-alt">
+            </div>
+            <div class="player-info">
+              <span class="player-number">12</span>
+              <p class="player-name">Martim <br>Faria</p>
+            </div>
+          </li>
+          <li class="player-card">
+            <div class="player-photo">
+              <img src="images/squad/Matias.webp" alt="Matias" class="photo-main">
+              <img src="images/squad/MatiasS2.webp" alt="" class="photo-alt">
+            </div>
+            <div class="player-info">
+              <span class="player-number">3</span>
+              <p class="player-name">Tomás <br>Matias</p>
+            </div>
+          </li>
+          <li class="player-card">
+            <div class="player-photo">
+              <img src="images/squad/Ribeiro.webp" alt="Ribeiro" class="photo-main">
+              <img src="images/squad/RibeiroS2.webp" alt="" class="photo-alt">
+            </div>
+            <div class="player-info">
+              <span class="player-number">10</span>
+              <p class="player-name">Tomás<br>Ribeiro</p>
+            </div>
+          </li>
+          <li class="player-card">
+            <div class="player-photo">
+              <img src="images/squad/Selas.webp" alt="Selas" class="photo-main">
+              <img src="images/squad/SelasS2.webp" alt="" class="photo-alt">
+            </div>
+            <div class="player-info">
+              <span class="player-number">4</span>
+              <p class="player-name">Henrique <br>Selas</p>
+            </div>
+          </li>
+        </ul>
+
+        <button class="carousel-btn next">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 4 17 12 9 20"></polyline></svg>
+        </button>
+      </div>
     </section>
     <section id="nxtMatch-container">
       <div class="games-container">
@@ -47,7 +172,7 @@
         <thead>
           <tr>
             <th></th>
-            <th>Team</th>
+            <th>EQUIPA</th>
             <th>PTS</th>
             <th>PL</th>
             <th>W</th>
@@ -163,13 +288,13 @@
       <h2>JUNTA-TE <span class="break-text">A NÓS</span></h2> 
       <div class="join-options">
         <h3>Vantagens</h3>
-        <p id="advantages-text" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis voluptas, quia animi, dicta maiores facilis nostrum similique sint error libero quaerat. Molestias, soluta. Nostrum minus tenetur repellat? Fuga, voluptatibus impedit.</p>
+        <p id="advantages-text" >Fazer parte do Hóquei Clube da Mealhada é integrar uma grande família unida pela paixão do hóquei em patins. Beneficia de uma formação desportiva de excelência, acompanhamento técnico especializado e de um espírito de equipa único que promove um estilo de vida saudável, a entreajuda e o amor pela modalidade.</p>
         <h3>Quotas</h3>
-        <p id="quotas-text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis blanditiis in cupiditate quibusdam et. Pariatur est rerum expedita blanditiis quia minus magnam ducimus aut possimus nesciunt eaque inventore, dolorem architecto!</p>
+        <p id="quotas-text" >As quotas de sócio e atleta asseguram a sustentabilidade do clube e o desenvolvimento das nossas equipas. Contribuem diretamente para a manutenção das infraestruturas, aquisição de equipamento de proteção e apoio logístico nas deslocações para os jogos do campeonato.</p>
         <h3>Como fazer a inscrição</h3>
-        <p id="regist-text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos commodi praesentium possimus omnis? Sint natus officia deserunt porro ipsum tempore, dignissimos ducimus quas beatae explicabo nam, veniam quam, reiciendis iure?</p>
+        <p id="regist-text" >Para efetuar a tua inscrição no clube, deves preencher a ficha de registo online ou descarregá-la para entregar presencialmente na secretaria. Junta os documentos necessários, como o exame médico desportivo e uma fotografia, e junta-te a nós.</p>
         <h3>Contactos para dúvidas</h3>
-        <p id="contacts-text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo esse deserunt, quidem totam facilis a minima minus distinctio dolorem voluptates. Distinctio ut ipsam culpa debitis consectetur quos fuga optio accusantium.</p>
+        <p id="contacts-text" >Tens alguma dúvida sobre os horários dos treinos, equipamentos ou processos de inscrição? Podes entrar em contacto connosco por: Telm: +351 912 345 678 Email: geral@hcmealhada.pt QEstamos sempre disponíveis para ajudar e esclarecer todas as tuas questões!</p>
       </div>
     </section>
   </main>
@@ -186,6 +311,7 @@
   <img src="images/logo-hcm.svg" alt="HC Mealhada logo" class="club-logo">
 </footer>
 
+  <script src="js/main.js"></script>
   <script src="js/home.js"></script>
 </body>
 </html>

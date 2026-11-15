@@ -10,13 +10,145 @@
 
 /* squad section --------------------------------------------------------------------------------------------*/
 #squad-container{
-  border: 2px solid black;
   grid-area: Squad;
-  padding: 100px;
-  height: 450px;
+  padding: 60px 40px;
+  overflow: hidden;
 }
 
+#squad-container h1 {
+  color: var(--primary-green);
+  font-size: clamp(22px, 2.4vw, 34px);
+  font-weight: 800;
+  margin-bottom: 30px;
+}
 
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.carousel-btn {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+}
+
+.carousel-btn svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: var(--primary-green);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.carousel-btn:hover {
+  opacity: 0.6;
+}
+
+.carousel-track {
+  list-style: none;
+  flex: 1;
+  max-width: 640px;
+  position: relative;
+  height: 380px;
+}
+
+.player-card {
+  --x: 0%;
+  --s: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  transform: translate(-50%, -50%) translateX(var(--x)) scale(var(--s));
+  opacity: 1;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.6s ease;
+}
+
+.player-card.active { --x: 0%;    --s: 1;    z-index: 3; }
+.player-card.prev   { --x: -112%; --s: 0.55; z-index: 2; }
+.player-card.next   { --x: 112%;  --s: 0.55; z-index: 2; }
+
+.player-card.prev2 { --x: -175%; --s: 0.45; opacity: 0; pointer-events: none; z-index: 1; }
+.player-card.next2 { --x: 175%;  --s: 0.45; opacity: 0; pointer-events: none; z-index: 1; }
+
+.player-card.far-left  { --x: -240%; --s: 0.4; opacity: 0; pointer-events: none; }
+.player-card.far-right { --x: 240%;  --s: 0.4; opacity: 0; pointer-events: none; }
+
+.player-card::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 3%;
+  right: -12%;
+  bottom: 8%;
+  background-color: var(--primary-green);
+  z-index: 0;
+}
+
+.player-photo {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 3 / 4;
+}
+
+.player-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  transition: opacity 0.4s ease;
+}
+
+.photo-alt {
+  opacity: 0;
+}
+
+.player-card.active:hover .photo-main {
+  opacity: 0;
+}
+
+.player-card.active:hover .photo-alt {
+  opacity: 1;
+}
+
+.player-info {
+  position: relative;
+  z-index: 2;
+  width: 162px;
+  margin-top: -36px;
+  padding: 10px 14px 14px;
+  background-color: var(--primary-gray);
+  color: var(--primary-green);
+}
+
+.player-number {
+  display: block;
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.player-name {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.2;
+}
 
 /* NextGame section --------------------------------------------------------------------------------------------*/
 #nxtMatch-container{
@@ -419,6 +551,19 @@ td:not(.position):not(.team-info) {
     clip-path: polygon(0 0, 100% calc(100vw * 0.0612), 100% 100%, 0 100%);
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .carousel-track {
+    max-width: 900px;
+  }
+
+  .player-card.prev2,
+  .player-card.next2 {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 @media (max-width: 950px){
   #skate-container {
     transform: skewY(4.5deg);
@@ -437,6 +582,10 @@ td:not(.position):not(.team-info) {
     "Stands"
     "Skate"
     "JoinUs";
+  }
+
+  #squad-container {
+    padding: 40px 20px;
   }
 
   #nxtMatch-container{
@@ -467,5 +616,13 @@ td:not(.position):not(.team-info) {
 
   .join-options {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .player-card.prev,
+  .player-card.next {
+    opacity: 0;
+    pointer-events: none;
   }
 }

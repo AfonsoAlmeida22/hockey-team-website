@@ -1,0 +1,133 @@
+.games-page {
+  background-color: var(--white);
+  color: var(--primary-green);
+  padding: 60px 5vw 80px;
+}
+
+.games-section + .games-section {
+  margin-top: 70px;
+}
+
+.games-title {
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(54, 116, 66, 0.3);
+}
+
+.games-month {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 35px 0 15px;
+}
+
+.game-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--primary-gray);
+  border-radius: 12px;
+  padding: 25px 40px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.game-card:hover {
+  background-color: #d2d2d2;
+}
+
+.game-card.next-game {
+  border-left: 5px solid var(--primary-green);
+  background-color: rgba(54, 116, 66, 0.15);
+}
+
+.game-teams {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.game-teams img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.2));
+}
+
+.game-vs,
+.game-score {
+  min-width: 70px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.game-score {
+  white-space: nowrap;
+}
+
+.game-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: rgba(54, 116, 66, 0.12);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tag-highlight {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.game-info h4 {
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.game-date {
+  font-size: 15px;
+  color: rgba(54, 116, 66, 0.75);
+}
+
+/* media queries ----------------------------------------------------------------------------------*/
+@media (max-width: 1000px) {
+  .game-card {
+    gap: 25px 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .game-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .game-teams {
+    gap: 20px;
+  }
+
+  .game-teams img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .game-tags {
+    justify-content: center;
+  }
+}

@@ -52,6 +52,7 @@ footer img.club-logo {
   z-index: 1;
 }
 
+/* media queries ----------------------------------------------------------------------------------*/
 @media (max-width: 855px) {
   footer {
     padding: 20px 10vw;
