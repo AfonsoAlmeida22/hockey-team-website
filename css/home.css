@@ -208,21 +208,7 @@
 }
 
 .infoGames-container .btn {
-  display: inline-block;
-  background-color: var(--secondary-green);
-  color: var(--white);
-  text-decoration: none;
-  padding: 10px 25px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 14px;
   align-self: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.3s ease;
-}
-
-.infoGames-container .btn:hover {
-  opacity: 0.8;
 }
 
 .teams-wrapper{
@@ -361,8 +347,9 @@ td:not(.position):not(.team-info) {
 }
 
 #skater-icon {
+  --skate-w: 60px;
   position: absolute;
-  width: 60px;
+  width: var(--skate-w);
   height: auto;
   bottom: -2px;
   left: 0;
@@ -375,13 +362,13 @@ td:not(.position):not(.team-info) {
 }
 
 @keyframes skateMoveX {
-  0%   { left: 0%; }
-  40%  { left: 88%; }
-  46%  { left: 90%; }
-  52%  { left: 88%; }
-  90%  { left: 2%; }
-  95%  { left: 0%; }
-  100% { left: 0%; }
+  0%   { left: 0; }
+  40%  { left: calc((100% - var(--skate-w)) * 0.98); }
+  46%  { left: calc(100% - var(--skate-w)); }
+  52%  { left: calc((100% - var(--skate-w)) * 0.98); }
+  90%  { left: calc((100% - var(--skate-w)) * 0.02); }
+  95%  { left: 0; }
+  100% { left: 0; }
 }
 
 @keyframes skateJump {

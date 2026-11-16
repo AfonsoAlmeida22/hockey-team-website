@@ -1,0 +1,36 @@
+.api-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 16px;
+}
+
+.dog-frame {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-gray);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#dog-status {
+  color: var(--secondary-green);
+  padding: 0 16px;
+  text-align: center;
+}
+
+#dog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#dog-image[hidden],
+#dog-status[hidden] {
+  display: none;
+}

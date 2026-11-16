@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HC Mealhada - Cão do Dia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,700;0,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/api.css">
+</head>
+<body>
+
+  <header>
+    <button class="menu-icon" aria-expanded="false" aria-controls="side-menu">&#9776;</button>
+    <a href="index.html"><img src="images/logo-hcm-white.svg" alt="HC Mealhada logo" class="club-logo"></a>
+  </header>
+  <nav class="side-menu" id="side-menu" aria-hidden="true">
+    <div class="side-menu-top">
+      <a href="index.html"><img src="images/logo-hcm-white.svg" alt="HC Mealhada logo" class="side-menu-logo"></a>
+      <button class="side-menu-close">
+        Fechar <span aria-hidden="true">&#10005;</span>
+      </button>
+    </div>
+    <ul class="side-menu-links">
+      <li>
+        <a href="index.html">Página Principal <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="games.html">Resultados e Jogos <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </a>
+      </li>
+      <li>
+        <a href="pageApi.html">Cão do Dia <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="api-page">
+    <h2>Cão do Dia</h2>
+    <div class="dog-frame">
+      <p id="dog-status">A carregar…</p>
+      <img id="dog-image" alt="Foto aleatória de um cão" hidden>
+    </div>
+    <button id="dog-button" class="btn" type="button">Outro cão</button>
+  </main>
+
+  <footer>
+  <div class="footer-content">
+    <div class="footer-brand">#HCM</div>
+    <ul class="footer-links">
+      <li><a href="#">CONTACTE-NOS</a></li>
+      <li><a href="#">TERMOS E CONDIÇÕES</a></li>
+      <li><a href="#">POLÍTICA DE COOKIES</a></li>
+    </ul>
+  </div>
+  <img src="images/logo-hcm.svg" alt="HC Mealhada logo" class="club-logo">
+</footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/api.js"></script>
+</body>
+</html>
