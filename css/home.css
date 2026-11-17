@@ -322,11 +322,11 @@ th:nth-child(2), td:nth-child(2) {
 }
 
 .highlight-gold .position {
-  background-color: #ffff00;
+  background-color: #E9C46A;
 }
 
 .highlight-green .position {
-  background-color: #d1fae5;
+  background-color: rgba(54, 116, 66, 0.15);
 }
 
 td:not(.position):not(.team-info) {

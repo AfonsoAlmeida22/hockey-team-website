@@ -16,7 +16,7 @@ async function loadDog() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`)
 
     const data = await response.json()
-    if (data.status !== 'success') throw new Error('Resposta inválida da API')
+    if (data.status !== 'success') throw new Error('Invalid API response')
 
     const nextImage = new Image()
     nextImage.src = data.message
@@ -27,7 +27,7 @@ async function loadDog() {
     dogStatus.hidden = true
   } catch (error) {
     console.error(error)
-    showStatus('Não foi possível carregar a imagem. Tenta novamente.')
+    showStatus('Unable to load the image. Try again.')
   } finally {
     dogButton.disabled = false
   }
